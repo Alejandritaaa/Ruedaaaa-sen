@@ -1,5 +1,5 @@
   .fondo {
-  background: url("assets/fondo.png") no-repeat center center;
+  background: url("https://thumbs.dreamstime.com/b/vibrante-parque-de-atracciones-en-la-diversi%C3%B3n-nocturna-dise%C3%B1o-vectorial-excitaci%C3%B3n-ai-generativo-una-animada-ilustraci%C3%B3n-un-382925037.jpg") no-repeat center center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -18,6 +18,12 @@ body, html {
   font-family: 'Arial', sans-serif;
   overflow: hidden;
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(48, 4, 31);
+  }
 
 .fondo {
   background: url("assets/fondo-nocturno.png") no-repeat center center;
@@ -37,11 +43,11 @@ body, html {
 .rueda {
   width: 300px;
   height: 300px;
-  border: 6px dotted gold;
+  border: 6px dotted rgb(185, 44, 174);
   border-radius: 50%;
   position: relative;
   animation: girar 30s linear infinite;
-  box-shadow: 0 0 25px gold;
+  box-shadow: 0 0 25px rgb(165, 73, 31);
 }
 
 @keyframes girar {
@@ -52,32 +58,37 @@ body, html {
 .cabina {
   width: 60px;
   height: 60px;
-  background-color: rgba(255, 223, 0, 0.8);
+  background-color: rgba(116, 91, 206, 0.8);
   border: 2px solid #fff;
   border-radius: 50%;
   position: absolute;
   text-align: center;
   line-height: 60px;
   font-weight: bold;
-  color: #000;
-  box-shadow: 0 0 10px yellow;
+  color: #503434;
+  box-shadow: 0 0 10px rgb(214, 14, 14);
   cursor: pointer;
   transition: transform 0.2s;
 }
 
 .cabina:hover {
   transform: scale(1.1);
-  background-color: #fffacd;
+  background-color: #eb8715;
 }
-
-.cabina:nth-child(1) { top: 0%; left: 50%; transform: translate(-50%, 0); }
-.cabina:nth-child(2) { top: 18%; left: 82%; transform: translate(-50%, -50%); }
-.cabina:nth-child(3) { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-.cabina:nth-child(4) { top: 82%; left: 82%; transform: translate(-50%, -50%); }
-.cabina:nth-child(5) { top: 100%; left: 50%; transform: translate(-50%, -100%); }
-.cabina:nth-child(6) { top: 82%; left: 18%; transform: translate(-50%, -50%); }
-.cabina:nth-child(7) { top: 50%; left: 0%; transform: translate(-50%, -50%); }
-.cabina:nth-child(8) { top: 18%; left: 18%; transform: translate(-50%, -50%); }
+.cabina {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+.cabina:nth-child(1) { transform: rotate(0deg) translate(110px) rotate(0deg); }
+.cabina:nth-child(2) { transform: rotate(45deg) translate(110px) rotate(-45deg); }
+.cabina:nth-child(3) { transform: rotate(90deg) translate(110px) rotate(-90deg); }
+.cabina:nth-child(4) { transform: rotate(135deg) translate(140px) rotate(-135deg); }
+.cabina:nth-child(5) { transform: rotate(180deg) translate(150px) rotate(-180deg); }
+.cabina:nth-child(6) { transform: rotate(225deg) translate(150px) rotate(-225deg); }
+.cabina:nth-child(7) { transform: rotate(270deg) translate(150px) rotate(-270deg); }
+.cabina:nth-child(8) { transform: rotate(315deg) translate(140px) rotate(-315deg); }
 
 .resultado {
   position: absolute;
@@ -89,3 +100,12 @@ body, html {
   background: rgba(0, 0, 0, 0.6);
   padding: 12px;
 }
+.sky {
+  background: linear-gradient(to top, #000011, #000033);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
